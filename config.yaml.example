@@ -1,0 +1,6 @@
+socket: '/tmp/offthegrid.sock'
+database_uri: 'mongodb://user:pass@mongodb_host.local/files'
+gridfs_prefix: fs
+cors_header: '*'
+max_age: 31536000
+
