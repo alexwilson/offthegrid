@@ -38,7 +38,7 @@ func (h *OTGServer) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 
 	// Set cache-control and expiry
-	w.Header().Set("Cache-Control", fmt.Sprintf("maxage=%d", h.Config.MaxAge))
+	w.Header().Set("Cache-Control", fmt.Sprintf("max-age=%d", h.Config.MaxAge))
 	w.Header().Set("Expires", time.Now().Add(time.Duration(h.Config.MaxAge)*time.Second).Format(time.RFC1123))
 
 	ctype := file.ContentType()
